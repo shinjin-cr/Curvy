@@ -1,3 +1,6 @@
+String svgheader = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?>\n<!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.0//EN\" \"http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd\">\n<svg xmlns:svg=\"http://www.w3.org/2000/svg\" xmlns=\"http://www.w3.org/2000/svg\" version=\"1.0\">\n";
+String svgfooter = "</svg>\n";
+
 CircleNode root;
 
 CircleNode active = null;
@@ -80,7 +83,7 @@ void keyPressed() {
     } else if (key == 'w') {
       active.changeTheta(-0.1);
     } else if (key == ENTER) {
-      println("<SVG>\n"+root.asSVG()+"</SVG>");
+      println(svgheader+root.asSVG()+svgfooter);
     } else if (key == TAB && active != null) {
       active.flip();
     }
