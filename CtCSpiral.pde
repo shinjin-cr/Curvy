@@ -70,7 +70,7 @@ class CtCSpiral implements CurvyElement {
     svg += " C "+ r[4].x + ", " +r[4].y;
     svg += " "  + r[5].x + ", " +r[5].y;
     svg += " "  + r[6].x + ", " +r[6].y;
-    svg += "\" style=\"fill:none;fill-rule:evenodd;stroke:#FF0000;stroke-width:10px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1\" />\n";
+    svg += "\" style=\"fill:none;fill-rule:evenodd;stroke:#557DBB;stroke-width:10px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1\" />\n";
     
     return svg;
   } 

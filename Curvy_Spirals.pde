@@ -83,7 +83,7 @@ void keyPressed() {
     } else if (key == 'w') {
       active.changeTheta(-0.1);
     } else if (key == ENTER) {
-      println(svgheader+root.asSVG()+svgfooter);
+      println(svgheader+root.asSVG(root.getDrawCircles())+svgfooter);
     } else if (key == TAB && active != null) {
       active.flip();
     }

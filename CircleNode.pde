@@ -37,6 +37,8 @@ class CircleNode {
     }    
   }
   
+  boolean getDrawCircles() { return drawcircles; }
+  
   float getR() { return r; }
   void setR(float _r) {
     r = _r;
@@ -122,13 +124,18 @@ class CircleNode {
     }
   }
   
-  String asSVG() {
+  String asSVG(boolean withCircles) {
     String svg = "";
+    if (withCircles) {
+      svg = "<circle ";
+      svg += "cx=\"" + center.x + "\" cy=\"" + center.y + "\" r=\"" + r;
+      svg += "\" style=\"fill:none;fill-rule:evenodd;stroke:#90CF35;stroke-width:5px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1\" />\n";
+    }
     if (curvy != null) {
-      svg = curvy.asSVG();
+      svg += curvy.asSVG();
     }
     for ( int k = 0; k < children.length; ++k) {
-      svg += children[k].asSVG();
+      svg += children[k].asSVG(withCircles);
     }
     return svg;
   }
