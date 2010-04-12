@@ -82,7 +82,7 @@ class CircleNode {
         float dC = m+0.0001;//parent.center.dist(center);
         spiral.calcParams(dC);
 //        spiral.calcParams(max(dC, (parent.r-r)*0.9));
-        spiral.setTransform(1, parent.center, parent.theta, false);
+        spiral.setTransform(1, parent.center, parent.theta, mirrored);
         theta = parent.theta+spiral.theta*2;
         center = spiral.getC1();
         

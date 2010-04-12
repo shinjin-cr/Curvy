@@ -18,7 +18,7 @@ void setup() {
   
   frameRate(24);
   
-  root = new CircleNode(width/2, height/2, min(width/2, height/2)*0.19, false, null);
+  root = new CircleNode(width/2, height/2, min(width/2, height/2)*0.5, false, null);
 //  boolean b = false;
 //  for (int i = 0; i < 6; i+=2) {
 //    root.addCircle(160+240*cos(-PI/3+i*PI/8), 300+240*sin(-PI/3+i*PI/8), 40+5*i, false);
@@ -77,7 +77,7 @@ void keyPressed() {
   CircleNode newactive = null, p;
   if (active != null) {
     if (key == ' ') {
-      newactive = active.addCircle(active.center.x, active.center.y, active.r*0.75, !active.mirrored);
+      newactive = active.addCircle(active.center.x, active.center.y, active.r*0.75, active.mirrored);
     } else if (key == 'q') {
       active.changeTheta(0.1);
     } else if (key == 'w') {

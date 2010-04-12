@@ -128,17 +128,17 @@ class CiCSpiral implements CurvyElement {
     for (int i=0; i<6; ++i) {
       P[i].sub(origC0);
       P[i].mult(scale);
-      P[i].set( m*P[i].x*cos(rotation)-P[i].y*sin(rotation), P[i].x*sin(rotation)+P[i].y*cos(rotation), 0 );
+      P[i].set( m*(P[i].x*cos(rotation)-P[i].y*sin(rotation)), P[i].x*sin(rotation)+P[i].y*cos(rotation), 0 );
       P[i].add(origin);
     }
     c0.sub(origC0);
     c0.mult(scale);
-    c0.set( m*c0.x*cos(rotation)-c0.y*sin(rotation), c0.x*sin(rotation)+c0.y*cos(rotation), 0 );
+    c0.set( m*(c0.x*cos(rotation)-c0.y*sin(rotation)), c0.x*sin(rotation)+c0.y*cos(rotation), 0 );
     c0.add(origin);
 
     c1.sub(origC0);
     c1.mult(scale);
-    c1.set( m*c1.x*cos(rotation)-c1.y*sin(rotation), c1.x*sin(rotation)+c1.y*cos(rotation), 0 );
+    c1.set( m*(c1.x*cos(rotation)-c1.y*sin(rotation)), c1.x*sin(rotation)+c1.y*cos(rotation), 0 );
     c1.add(origin);
   }
 
